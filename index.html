@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dmego Home">
+    <meta name="keywords" content="Dmego,Homepage">
+    <meta name="author" content="Dmego">
+    <title>wxlovecc</title>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/onlinewebfonts.css"/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/iconfont.css">
+    <link rel="apple-touch-icon" href="https://unpkg.com/dmego-home-page@latest/apple-touch-icon.png">
+    <link rel="icon" href="https://unpkg.com/dmego-home-page@latest/favicon.ico">
+</head>
+
+<body>
+    <span class="mobile btn-mobile-menu">
+        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
+        <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
+    </span>
+    <header id="panel" class="panel-cover">
+        <div class="panel-main" style="background-color:rgb(222, 96, 186);">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                    <div class="ih-item circle effect right_to_left">            
+                        <a href="#" title="" class="blog-button">
+                            <div class="img"><img src="img/love1.jpg" alt="img" class="js-avatar iUp profilepic"></div>
+                            <div class="info iUp">
+                                <div class="info-back">
+                                    <h2> 
+                                        
+                                            王旭❤️褚楚
+                                        
+                                    </h2>
+                                    <p>
+                                        
+                                            2023 - 永远
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="panel-cover__title panel-title iUp">
+                        <a href="#" title="Dmego Home">wx_and_cc</a>
+                    </h1>
+            
+                    <hr class="panel-cover__divider iUp" />
+                    <p id="description" class="panel-cover__description iUp">如何得与凉风约, 不共尘沙一并来!
+                        <br/>
+                        <strong>-「中牟道中」</strong>
+                    </p>
+                    <div class="">
+                        <div>
+                            <nav class="cover-navigation cover-navigation--primary">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="/" class="blog-button">首页</a>
+                                    </li>
+                                    <li class="navigation__item" >
+                                        <a href="pages/photo.html" class="blog-button" target="_blank"click="tip" >照片</a>
+                                    </li>
+                                    <li class="navigation__item"click="tip">
+                                        <a href="" class="blog-button" target="_blank">碎碎念</a>
+                                    </li>
+                                    <li class="navigation__item"click="tip">
+                                        <a href="" class="blog-button" target="_blank">关于</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                     <div class="">
+                        <h6 style="color: rgb(0, 255, 204);">我们已经在一起：<span id="countdown"></span>啦！</h6>
+                             
+                        </div> 
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay cover-slate"></div>
+        </div>
+        <!-- <div class="beian iUp">
+            <a class="icp" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">XXX</a>
+            <a class="gwab" href="http://www.beian.gov.cn/portal/recordQuery" target="_blank">XXX</a>
+        </div> -->
+        <!-- <div class="remark iUp">
+            <p class="power">Powered By 
+                <a href="https://github.com/features/actions" target="_blank"> GitHub Actions </a> And 
+                <a href="https://hitokoto.cn/" target="_blank"> Hitokoto </a>
+            </p>
+        </div> -->
+    </header>
+    <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script>
+    <!-- <script type="text/javascript" src="/json/images.json?cb=getBingImages"></script> -->
+    <script>
+
+        function tip(){
+            alert("别着急，还在继续")
+        }
+
+
+// 定义截至时间点
+var examDate = "2024/1/12 17:50:00";
+			// 获取当前时间
+			var now = new Date().getTime();
+			// 获取所剩时间
+			var countdownDate = new   Date(examDate).getTime() - now;
+			function updateCountdown() {
+                
+				var days = Math.floor(countdownDate / (1000 * 60 * 60 * 24));
+				var d = Math.abs(days)
+                var hours = Math.floor((countdownDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var h = Math.abs(hours)
+                var minutes = Math.floor((countdownDate % (1000 * 60 * 60)) / (1000 * 60));
+				var m = Math.abs(minutes)
+                var seconds = Math.floor((countdownDate % (1000 * 60)) / 1000);
+				var s = Math.abs(seconds)
+                document.getElementById("countdown").textContent = d + "天 " + h + "小时" + m + "分钟 " + s + "秒";
+				// 获取当前时间
+				now = new Date().getTime();
+				countdownDate = new  Date(examDate).getTime() - now;
+			}
+			setInterval(updateCountdown, 1000);
+
+      
+    //   function show(){
+	// 		var date = new Date();
+	// 		var year = date.getFullYear();
+	// 		var month = date.getMonth()+1;
+	// 		month=month<10?"0"+month:month;
+	// 		var day = date.getDate();
+	// 		day=day<10?"0"+day:day;
+			
+
+	// 		var hour = date.getHours();
+	// 		hour= hour<10?"0"+ hour: hour;
+	// 		var minute = date.getMinutes();
+	// 		minute=minute<10?"0"+minute:minute;
+	// 		var second = date.getSeconds();
+	// 		second=second<10?"0"+second:second;
+	// 		var result = year+"."+month+"."+day+" "+hour+":"+minute+":"+second ;
+	// 		document.getElementById("time").innerHTML = result;
+	// 	}
+	// 	show();
+	// 	setInterval("show()",1000);
+	
+    </script>
+</body>
+</html>
